@@ -40,6 +40,8 @@ def main():
     else:
         return()    
 
+    if 'data' not in locals():
+        return()    
 
     assert len(data) == n
 
