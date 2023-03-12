@@ -30,8 +30,6 @@ def main():
         filename = input()
         if ".a" in filename:
             return
-        if "test/" not in filename:
-            filename = "test/" + filename
         if "test/" in filename:    
             with open(filename) as f:
                 n = int(f.readline().strip())
@@ -43,18 +41,10 @@ def main():
         return()    
 
 
-    # checks if lenght of data is the same as the said lenght
     assert len(data) == n
 
-    # calls function to assess the data 
-    # and give back all swaps
     swaps = build_heap(data)
 
-    # TODO: output how many swaps were made, 
-    # this number should be less than 4n (less than 4*len(data))
-
-
-    # output all swaps
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
