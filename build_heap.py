@@ -30,7 +30,7 @@ def main():
         filename = input()
         if ".a" in filename:
             return
-        with open("tests/"+input_type, encoding="utf-8") as f:
+        with open("tests/"+filename, encoding="utf-8") as f:
                 n = int(f.readline())
                 data = list(map(int, f.readline().split()))
     elif "I" in input_type:
