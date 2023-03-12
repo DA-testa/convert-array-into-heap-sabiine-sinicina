@@ -29,9 +29,8 @@ def main():
     if "F" in input_type:
         filename = input()
         if ".a" in filename:
-            return
-        if "tests/" in filename:        
-            with open(filename, encoding="utf-8") as f:
+            return       
+        with open("tests/"+filename, encoding="utf-8") as f:
                         n = int(f.readline())
                         data = list(map(int, f.readline().split()))
     elif "I" in input_type:
