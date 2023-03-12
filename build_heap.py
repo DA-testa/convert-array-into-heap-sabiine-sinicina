@@ -39,7 +39,6 @@ def main():
     elif "I" in input_type:
         n = int(input())
         data = list(map(int, input().split()))
-        height = compute_height(n, parents)
     else:
         return()    
 
