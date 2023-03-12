@@ -24,30 +24,28 @@ def build_heap(data):
 
 def main():
     
-    input_type = input()
-
-    if "F" in input_type:
-        filename = input()
-        if ".a" in filename:
-            return
-        if "test/" in filename:    
-            with open(filename) as f:
-                n = int(f.readline().strip())
-                data = list(map(int, f.readline().split()))
-    elif "I" in input_type:
+    text = input()
+    if "I" in text:
         n = int(input())
         data = list(map(int, input().split()))
+    elif "F" in text:
+        text2 = input()
+        if "a" in text2:
+            return()
+        with open ("tests/"+text2, encoding="utf-8") as fails:
+            n = int (fails.readline())
+            data = list(map(int, fails.readline().split()))
+            
     else:
-        return()    
-
-    if 'data' not in locals():
-        return()    
-
+        return()
+    
+    
     assert len(data) == n
 
     swaps = build_heap(data)
-
+    
     print(len(swaps))
+    
     for i, j in swaps:
         print(i, j)
 
